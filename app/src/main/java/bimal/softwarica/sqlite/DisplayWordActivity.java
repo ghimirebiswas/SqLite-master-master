@@ -22,7 +22,7 @@ public class DisplayWordActivity extends AppCompatActivity implements View.OnCli
 
     private ListView lstWord;
     private EditText etSearch;
-    private Button btnBack, btnSearch;
+    private Button btnSearch,btnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +31,11 @@ public class DisplayWordActivity extends AppCompatActivity implements View.OnCli
 
         lstWord = findViewById(R.id.lstWord);
         etSearch = findViewById(R.id.etSearch);
-        btnBack = findViewById(R.id.btnBack);
         btnSearch = findViewById(R.id.btnSearch);
+        btnAdd=findViewById(R.id.btnAdd);
 
         btnSearch.setOnClickListener(this);
-        btnBack.setOnClickListener(this);
+        btnAdd.setOnClickListener(this);
 
         LoadWord();
 
@@ -111,7 +111,8 @@ public class DisplayWordActivity extends AppCompatActivity implements View.OnCli
         if (v.getId()==R.id.btnSearch){
         SearchWord();
         }
-        else if (v.getId()==R.id.btnBack){
+
+        else if (v.getId()==R.id.btnAdd){
             Intent intent = new Intent(DisplayWordActivity.this, MainActivity.class);
             startActivity(intent);
         }

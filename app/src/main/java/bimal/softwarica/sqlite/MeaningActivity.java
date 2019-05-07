@@ -10,6 +10,7 @@ public class MeaningActivity extends AppCompatActivity {
 
     private TextView tvMeaning;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
